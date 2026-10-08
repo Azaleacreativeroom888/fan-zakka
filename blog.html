@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ブログ | 雑貨のおべんきょう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#da70b6;
+  --pink-deep:#a8458a;
+  --pink-pale:#f6d3e8;
+  --paper:#fffafd;
+  --ink:#4a2340;
+  --butter:#fff1a8;
+  --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Yusei Magic","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+header{background:var(--pink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--font-head);font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:4px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.25)}
+nav a[aria-current="page"]{background:#fff;color:var(--pink-deep)}
+
+.title{background:var(--pink-pale);border-bottom:6px dotted var(--pink)}
+.title .wrap{padding-top:36px;padding-bottom:30px}
+.title h1{margin:0;font-family:var(--font-head);font-weight:400;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.3}
+.title p{margin:6px 0 0}
+
+.feed{max-width:640px;margin:40px auto 0;padding:0 20px;display:grid;gap:16px}
+.post{background:#fff;border:2px solid var(--pink);border-radius:20px 20px 20px 4px;padding:14px 20px 16px}
+.post time{display:block;font-size:.85rem;font-weight:700;color:var(--pink-deep)}
+.post p{margin:2px 0 0}
+.post:nth-child(even){background:var(--paper);border-radius:20px 20px 4px 20px}
+.end{text-align:center;margin:28px 0 0;color:var(--pink-deep);font-weight:700}
+
+footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;padding:20px;font-size:.9rem}
+@media (max-width:720px){.feed{margin-top:28px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">雑貨のおべんきょう</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html" aria-current="page">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="wrap">
+    <h1>ブログ</h1>
+    <p>勉強の進捗を、日付と一言で。新しい記録が上に並びます。</p>
+  </div>
+</div>
+
+<main>
+  <div class="feed">
+    <!-- 新しい投稿は、ここの一番上にコピーして追加してください
+    <article class="post">
+      <time datetime="2026-10-08">2026.10.08</time>
+      <p>ここに日記の内容を書く。</p>
+    </article>
+    -->
+
+    <article class="post">
+      <time datetime="2026-10-03">2026.10.03</time>
+      <p>サンリオのキャラクターが生まれた年を年表にまとめはじめた。思っていたより古いキャラが多くてびっくり。</p>
+    </article>
+
+    <article class="post">
+      <time datetime="2026-10-02">2026.10.02</time>
+      <p>ゆるキャラって何がゆるいのかを調べた。ご当地の魅力を伝える役目と、見た目のゆるさは別物らしい。</p>
+    </article>
+
+    <article class="post">
+      <time datetime="2026-10-01">2026.10.01</time>
+      <p>雑貨の勉強サイトをつくりはじめた。ここに進捗を書いていく（サンプルなので書き換えてね）。</p>
+    </article>
+  </div>
+  <p class="end">ここまでです</p>
+</main>
+
+<footer>
+  <small>&copy; 2026 雑貨のおべんきょう</small>
+</footer>
+
+</body>
+</html>
