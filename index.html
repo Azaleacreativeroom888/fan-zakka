@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雑貨のおべんきょう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#da70b6;
+  --pink-deep:#a8458a;
+  --pink-pale:#f6d3e8;
+  --paper:#fffafd;
+  --ink:#4a2340;
+  --butter:#fff1a8;
+  --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Yusei Magic","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* header */
+header{background:var(--pink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--font-head);font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:4px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.25)}
+nav a[aria-current="page"]{background:#fff;color:var(--pink-deep)}
+
+/* hero */
+.hero{background:var(--pink-pale);border-bottom:6px dotted var(--pink)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding-top:48px;padding-bottom:40px}
+.tag{position:relative;display:inline-block;background:var(--butter);padding:28px 32px 24px 56px;border-radius:10px 40px 40px 10px;box-shadow:3px 4px 0 var(--pink);transform-origin:12px 20px;animation:swing 1.6s ease-out 1}
+.tag::before{content:"";position:absolute;left:18px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--pink-pale);border:2px solid var(--pink-deep)}
+.tag h1{margin:0;font-family:var(--font-head);font-weight:400;font-size:clamp(2rem,6vw,3.1rem);line-height:1.25}
+.tag p{margin:6px 0 0;font-size:.95rem}
+.hero .lead{margin:24px 0 0;max-width:30em}
+.shelf svg{width:100%;height:auto;display:block}
+@keyframes swing{0%{transform:rotate(-7deg)}30%{transform:rotate(4deg)}60%{transform:rotate(-2deg)}100%{transform:rotate(0)}}
+
+/* sections */
+section{padding:48px 0 8px}
+h2{font-family:var(--font-head);font-weight:400;font-size:1.6rem;margin:0 0 6px}
+h2 span{background:linear-gradient(transparent 62%,var(--pink-pale) 62%)}
+.sub{margin:0 0 20px}
+
+/* genres */
+.genres{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.genres li{padding:6px 18px;border:2px solid var(--pink);background:#fff;font-weight:700}
+.genres li:nth-child(4n+1){border-radius:999px}
+.genres li:nth-child(4n+2){border-radius:14px 4px 14px 4px}
+.genres li:nth-child(4n+3){border-radius:4px 14px 4px 14px;background:var(--pink-pale)}
+.genres li:nth-child(4n){border-radius:999px 14px 999px 14px}
+
+/* page guide */
+.guide{list-style:none;margin:0;padding:0;border-top:2px dashed var(--pink)}
+.guide li{border-bottom:2px dashed var(--pink)}
+.guide a{display:grid;grid-template-columns:9em 1fr;gap:4px 20px;padding:18px 8px;text-decoration:none;align-items:baseline}
+.guide a:hover{background:var(--pink-pale)}
+.guide b{font-family:var(--font-head);font-weight:400;font-size:1.3rem;color:var(--pink-deep)}
+
+/* latest blog */
+.posts{display:grid;gap:14px;max-width:640px}
+.post{background:#fff;border:2px solid var(--pink);border-radius:18px 18px 18px 4px;padding:12px 18px}
+.post time{display:block;font-size:.85rem;color:var(--pink-deep);font-weight:700}
+.post p{margin:2px 0 0}
+.more{display:inline-block;margin-top:16px;font-weight:700;color:var(--pink-deep)}
+
+footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;padding:20px;font-size:.9rem}
+
+@media (max-width:720px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:32px}
+  .guide a{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.tag{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">雑貨のおべんきょう</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html" aria-current="page">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="tag">
+        <h1>雑貨の<br>おべんきょう</h1>
+        <p>かわいいを、ちゃんと学ぶ</p>
+      </div>
+      <p class="lead">サンリオやゆるキャラから、文房具、食器、昭和レトロ、北欧雑貨まで。身のまわりの「かわいい」と「便利」の理由を調べて、記録していくサイトです。</p>
+    </div>
+    <div class="shelf" aria-hidden="true">
+      <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="176" width="300" height="14" rx="7" fill="#da70b6"/>
+        <rect x="10" y="86" width="300" height="14" rx="7" fill="#da70b6"/>
+        <!-- mug -->
+        <rect x="36" y="124" width="52" height="52" rx="10" fill="#fff"/>
+        <path d="M88 138c18 0 18 24 0 24" fill="none" stroke="#fff" stroke-width="8"/>
+        <circle cx="62" cy="150" r="9" fill="#f6d3e8"/>
+        <!-- jar -->
+        <rect x="116" y="112" width="56" height="64" rx="14" fill="#fff1a8"/>
+        <rect x="122" y="100" width="44" height="14" rx="5" fill="#a8458a"/>
+        <!-- ink bottle -->
+        <rect x="204" y="132" width="34" height="44" rx="8" fill="#f6d3e8"/>
+        <rect x="213" y="120" width="16" height="14" rx="3" fill="#4a2340"/>
+        <!-- round plush -->
+        <circle cx="272" cy="152" r="24" fill="#fff"/>
+        <circle cx="262" cy="148" r="2.5" fill="#4a2340"/><circle cx="282" cy="148" r="2.5" fill="#4a2340"/>
+        <ellipse cx="272" cy="156" rx="5" ry="3" fill="#da70b6"/>
+        <!-- upper shelf -->
+        <rect x="44" y="40" width="40" height="46" rx="6" fill="#fff"/>
+        <rect x="52" y="50" width="24" height="16" rx="3" fill="#da70b6"/>
+        <circle cx="150" cy="62" r="24" fill="#fff1a8"/>
+        <path d="M130 62h40" stroke="#da70b6" stroke-width="4"/>
+        <rect x="224" y="46" width="60" height="40" rx="8" fill="#fff"/>
+        <path d="M236 60h36M236 72h24" stroke="#da70b6" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section aria-labelledby="genres">
+    <h2 id="genres"><span>しらべているジャンル</span></h2>
+    <p class="sub">キャラクターものに限らず、雑貨と呼ばれるものを広く見ていきます。</p>
+    <ul class="genres">
+      <li>サンリオ・キャラクター雑貨</li>
+      <li>ゆるキャラ</li>
+      <li>文房具</li>
+      <li>食器・キッチン雑貨</li>
+      <li>昭和レトロ</li>
+      <li>北欧雑貨</li>
+      <li>和雑貨</li>
+      <li>インテリア小物</li>
+      <li>雑貨屋さん巡り</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="guide">
+    <h2 id="guide"><span>サイトの案内</span></h2>
+    <p class="sub">読みたいところから、どうぞ。</p>
+    <ul class="guide">
+      <li><a href="blog.html"><b>ブログ</b><span>勉強の進捗を、日付と一言日記で短く記録しています。</span></a></li>
+      <li><a href="column.html"><b>コラム</b><span>雑貨にまつわる漫画・イラスト・4コマと、軽めの小論文を置いています。</span></a></li>
+      <li><a href="about.html"><b>このサイトについて</b><span>サイトの目的と、運営しているりっちゃんの紹介です。</span></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="latest">
+    <h2 id="latest"><span>さいきんの記録</span></h2>
+    <p class="sub">ブログの新着です。</p>
+    <div class="posts">
+      <article class="post">
+        <time datetime="2026-10-01">2026.10.01</time>
+        <p>雑貨の勉強サイトをつくりはじめた。まずはトップページから。</p>
+      </article>
+      <article class="post">
+        <time datetime="2026-09-30">2026.09.30</time>
+        <p>ここに勉強の進捗を書いていきます（サンプルなので書き換えてね）。</p>
+      </article>
+    </div>
+    <a class="more" href="blog.html">ブログをぜんぶ見る</a>
+  </section>
+
+</main>
+
+<footer>
+  <small>&copy; 2026 雑貨のおべんきょう</small>
+</footer>
+
+</body>
+</html>
