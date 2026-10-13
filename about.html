@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>このサイトについて | 雑貨のおべんきょう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#da70b6;
+  --pink-deep:#a8458a;
+  --pink-pale:#f6d3e8;
+  --paper:#fffafd;
+  --ink:#4a2340;
+  --butter:#fff1a8;
+  --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Yusei Magic","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:16px}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+header{background:var(--pink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--font-head);font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:4px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.25)}
+nav a[aria-current="page"]{background:#fff;color:var(--pink-deep)}
+
+.title{background:var(--pink-pale);border-bottom:6px dotted var(--pink)}
+.title .wrap{padding-top:36px;padding-bottom:30px}
+.title h1{margin:0;font-family:var(--font-head);font-weight:400;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.3}
+.title p{margin:6px 0 0}
+
+section{padding:48px 0 8px}
+h2{font-family:var(--font-head);font-weight:400;font-size:1.6rem;margin:0 0 6px}
+h2 span{background:linear-gradient(transparent 62%,var(--pink-pale) 62%)}
+.sub{margin:0 0 20px}
+.text{max-width:40em}
+.text p{margin:0 0 12px}
+
+/* 運営者 */
+.me{display:flex;gap:18px;align-items:flex-start;max-width:640px;background:#fff;border:2px solid var(--pink);border-radius:24px 24px 24px 4px;padding:20px 24px}
+.me .icon{flex:none;width:64px;height:64px;border-radius:50%;background:var(--butter);border:3px solid var(--pink);display:grid;place-items:center;font-size:1.8rem}
+.me h3{margin:0;font-family:var(--font-head);font-weight:400;font-size:1.2rem}
+.me p{margin:4px 0 0}
+
+/* リンク */
+.links{list-style:none;margin:0 0 28px;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.links a{display:flex;align-items:center;gap:14px;padding:12px 16px;background:#fff;border:2px solid var(--pink);border-radius:16px;text-decoration:none}
+.links li:nth-child(even) a{border-radius:4px 16px 4px 16px}
+.links a:hover{background:var(--pink-pale)}
+.links .ic{flex:none;width:40px;height:40px;border-radius:50%;background:var(--pink-pale);display:grid;place-items:center;font-size:1.3rem}
+.links b{display:block;line-height:1.4}
+.links small{display:block;font-size:.82rem;line-height:1.5}
+.group{margin:0 0 10px;font-weight:700;color:var(--pink-deep)}
+
+/* フォーム */
+.form{max-width:640px;background:#fff;border:2px solid var(--pink);border-radius:24px 24px 24px 4px;padding:24px 28px}
+.form p.intro{margin:0 0 18px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;margin-bottom:4px}
+.req{color:var(--pink-deep)}
+.field input,.field textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:2px solid var(--pink);border-radius:12px;padding:8px 14px}
+.field textarea{min-height:140px;resize:vertical}
+.err{display:block;font-size:.85rem;color:#b02a5c}
+.btn{font:inherit;font-weight:700;color:#fff;background:var(--pink-deep);border:0;border-radius:999px;padding:10px 28px;cursor:pointer}
+.btn:hover{background:var(--pink)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.ok{background:var(--butter);border-radius:12px;padding:10px 16px;margin-bottom:16px;font-weight:700}
+.ng{background:#fde4ee;color:#b02a5c;border-radius:12px;padding:10px 16px;margin-bottom:16px}
+
+.back{display:inline-block;margin-top:28px;font-weight:700;color:var(--pink-deep)}
+
+footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;padding:20px;font-size:.88rem}
+footer p{max-width:760px;margin:0 auto 8px}
+@media (max-width:720px){.form{padding:20px}.me{padding:16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">雑貨のおべんきょう</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html">コラム</a></li>
+        <li><a href="about.html" aria-current="page">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="wrap">
+    <h1>このサイトについて</h1>
+    <p>サイトの目的と、運営者の紹介、リンク、連絡先です。</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section aria-labelledby="purpose">
+    <h2 id="purpose"><span>サイトの目的</span></h2>
+    <div class="text">
+      <p>「雑貨のおべんきょう」は、雑貨について調べて学んだことを記録するサイトです。サンリオやゆるキャラのようなキャラクターものに限らず、文房具、食器、昭和レトロ、北欧雑貨など、身のまわりの「かわいい」と「便利」を広く扱います。</p>
+      <p>ブログでは勉強の進捗を短く、コラムでは漫画・イラスト・4コマや軽い小論文を発信しています。</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="owner">
+    <h2 id="owner"><span>運営者</span></h2>
+    <div class="me">
+      <div class="icon" aria-hidden="true">🌸</div>
+      <div>
+        <h3>Azalea72</h3>
+        <p>漫画・イラストを描いて公開しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="links">
+    <h2 id="links"><span>リンク</span></h2>
+    <p class="sub">作品やSNSはこちらです。</p>
+
+    <p class="group">漫画・イラスト掲載サイト</p>
+    <ul class="links">
+      <li><a href="https://rookie.shonenjump.com/users/14728546961183734555" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📚</span><span><b>ジャンプルーキー</b><small>オリジナル漫画を掲載中</small></span></a></li>
+      <li><a href="https://www.pixiv.net/users/105728284" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">🎨</span><span><b>Pixiv</b><small>イラストを掲載</small></span></a></li>
+    </ul>
+
+    <p class="group">SNS・その他</p>
+    <ul class="links">
+      <li><a href="https://bsky.app/profile/azaleaazalea88.bsky.social" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">🦋</span><span><b>Bluesky</b><small>近況・作品のお知らせ</small></span></a></li>
+      <li><a href="https://www.youtube.com/@LilyPopins0512" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">🎬</span><span><b>YouTube（リリポピ）</b><small>動画チャンネル</small></span></a></li>
+      <li><a href="https://lilipopi.github.io/lilypopins/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">🌸</span><span><b>リリポピのホームページ</b><small>別サイト</small></span></a></li>
+    </ul>
+
+    <p class="group">Azalea72のホームページ</p>
+    <ul class="links">
+      <li><a href="https://azaleacreativeroom888.github.io/storyreviewazalea/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">📖</span><span><b>書評サイト</b><small>本・アニメ・映画・ゲーム・小説の備忘録</small></span></a></li>
+      <li><a href="https://azaleacreativeroom888.github.io/fan-english/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">🍔</span><span><b>英語サイト（English Site）</b><small>英語話者と英語学習者に向けたサイト</small></span></a></li>
+      <li><a href="https://azaleacreativeroom888.github.io/fan-watercolor/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">☁️</span><span><b>水彩画サイト</b><small>水彩画掲載</small></span></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact"><span>お問い合わせ</span></h2>
+    <p class="sub">ご質問・ご感想などはこちらからどうぞ。</p>
+    <div class="form">
+      <p class="intro">Gmailで受け取り、返信いたします。</p>
+
+      <div data-fs-success class="ok" style="display:none;">メッセージを送信しました。ありがとうございます！</div>
+      <div data-fs-error class="ng" style="display:none;"></div>
+
+      <form id="contact-form" action="https://formspree.io/f/maqvpvoz" method="POST">
+        <div class="field">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="お名前" required>
+        </div>
+        <div class="field">
+          <label for="email">メールアドレス <span class="req">*</span></label>
+          <input type="email" id="email" name="email" data-fs-field placeholder="example@email.com" required>
+          <span data-fs-error="email" class="err"></span>
+        </div>
+        <div class="field">
+          <label for="message">メッセージ <span class="req">*</span></label>
+          <textarea id="message" name="message" data-fs-field placeholder="メッセージを入力してください" rows="6" required></textarea>
+          <span data-fs-error="message" class="err"></span>
+        </div>
+        <button class="btn" type="submit" data-fs-submit-btn>送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <a class="back" href="index.html">← トップページに戻る</a>
+
+</main>
+
+<footer>
+  <p>当サイトに掲載されている画像・文章・作品について、AI学習への利用、トレース、無断転載、二次利用を禁止します。</p>
+  <p>Please refrain from using any images, text, or works on this website for AI training, tracing, unauthorized reproduction, redistribution, or secondary use.</p>
+  <small>&copy; 2026 雑貨のおべんきょう</small>
+</footer>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'maqvpvoz' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
