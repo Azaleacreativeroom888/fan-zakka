@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コラム | 雑貨のおべんきょう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#da70b6;
+  --pink-deep:#a8458a;
+  --pink-pale:#f6d3e8;
+  --paper:#fffafd;
+  --ink:#4a2340;
+  --butter:#fff1a8;
+  --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Yusei Magic","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+header{background:var(--pink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--font-head);font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:4px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.25)}
+nav a[aria-current="page"]{background:#fff;color:var(--pink-deep)}
+
+.title{background:var(--pink-pale);border-bottom:6px dotted var(--pink)}
+.title .wrap{padding-top:36px;padding-bottom:30px}
+.title h1{margin:0;font-family:var(--font-head);font-weight:400;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.3}
+.title p{margin:6px 0 0}
+
+section{padding:48px 0 8px}
+h2{font-family:var(--font-head);font-weight:400;font-size:1.6rem;margin:0 0 6px}
+h2 span{background:linear-gradient(transparent 62%,var(--pink-pale) 62%)}
+.sub{margin:0 0 22px}
+
+/* 作品 */
+.works{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.work{margin:0}
+.work .ph,.work img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:3px solid var(--pink);border-radius:14px;background:#fff}
+.work .ph{display:grid;place-items:center;color:var(--pink-deep);font-weight:700;background:repeating-linear-gradient(45deg,#fff,#fff 10px,var(--pink-pale) 10px,var(--pink-pale) 20px)}
+.work:nth-child(2) .ph,.work:nth-child(2) img{border-radius:4px 28px 4px 28px}
+.work:nth-child(3) .ph,.work:nth-child(3) img{border-radius:28px 4px 28px 4px}
+.work figcaption{margin-top:6px;font-size:.92rem}
+.work figcaption b{display:inline-block;background:var(--butter);padding:0 10px;border-radius:999px;font-size:.8rem;margin-right:6px}
+
+/* 4コマ */
+.yonkoma{max-width:340px;display:grid;gap:10px}
+.yonkoma .koma{display:grid;grid-template-columns:2.2em 1fr;background:#fff;border:3px solid var(--ink);min-height:120px}
+.koma .no{background:var(--pink);color:#fff;font-family:var(--font-head);display:grid;place-items:center}
+.koma .pic{display:grid;place-items:center;padding:10px;color:var(--pink-deep);font-weight:700;text-align:center;font-size:.9rem}
+
+/* 小論文 */
+.essay{max-width:680px;background:#fff;border:2px solid var(--pink);border-radius:24px 24px 24px 4px;padding:28px 32px 24px}
+.essay .meta{margin:0;font-size:.85rem;font-weight:700;color:var(--pink-deep)}
+.essay h3{margin:2px 0 14px;font-family:var(--font-head);font-weight:400;font-size:1.45rem;line-height:1.5}
+.essay h4{margin:22px 0 2px;font-size:1rem;color:var(--pink-deep)}
+.essay h4::before{content:"";display:inline-block;width:.7em;height:.7em;margin-right:.5em;border-radius:50%;background:var(--pink)}
+.essay p{margin:0}
+
+/* 特集リンク */
+.feature{display:flex;align-items:center;gap:18px;max-width:680px;padding:18px 24px;background:var(--butter);border:3px solid var(--pink);border-radius:10px 40px 40px 10px;box-shadow:3px 4px 0 var(--pink);text-decoration:none}
+.feature:hover{background:var(--pink-pale)}
+.feature .no{flex:none;width:52px;height:52px;border-radius:50%;background:var(--pink);color:#fff;font-family:var(--font-head);display:grid;place-items:center;font-size:.95rem}
+.feature b{display:block;font-family:var(--font-head);font-weight:400;font-size:1.3rem;line-height:1.4}
+.feature small{display:block;font-size:.9rem;line-height:1.6}
+.feature .arrow{margin-left:auto;font-size:1.6rem;color:var(--pink-deep)}
+
+footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;padding:20px;font-size:.9rem}
+@media (max-width:720px){.essay{padding:22px 20px 18px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">雑貨のおべんきょう</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html" aria-current="page">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="wrap">
+    <h1>コラム</h1>
+    <p>雑貨にまつわる漫画・イラスト・4コマと、軽めの小論文を置いています。</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section aria-labelledby="works">
+    <h2 id="works"><span>漫画・イラスト</span></h2>
+    <p class="sub">雑貨をテーマに描いた作品です。</p>
+    <div class="works">
+      <!-- 画像に差し替えるときは <div class="ph">…</div> を
+           <img src="画像のファイル名" alt="作品の説明"> に置き換えてください -->
+      <figure class="work">
+        <div class="ph" role="img" aria-label="イラストの置き場所">イラスト</div>
+        <figcaption><b>イラスト</b>雑貨屋さんの棚（サンプル）</figcaption>
+      </figure>
+      <figure class="work">
+        <div class="ph" role="img" aria-label="漫画の置き場所">漫画</div>
+        <figcaption><b>漫画</b>文房具のひみつ（サンプル）</figcaption>
+      </figure>
+      <figure class="work">
+        <div class="ph" role="img" aria-label="イラストの置き場所">イラスト</div>
+        <figcaption><b>イラスト</b>ゆるキャラ図鑑（サンプル）</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section aria-labelledby="yonkoma">
+    <h2 id="yonkoma"><span>4コマ</span></h2>
+    <p class="sub">雑貨まわりの小さなできごとを、4コマで。</p>
+    <div class="yonkoma">
+      <div class="koma"><span class="no">1</span><span class="pic">1コマ目の絵</span></div>
+      <div class="koma"><span class="no">2</span><span class="pic">2コマ目の絵</span></div>
+      <div class="koma"><span class="no">3</span><span class="pic">3コマ目の絵</span></div>
+      <div class="koma"><span class="no">4</span><span class="pic">4コマ目の絵（オチ）</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="essay">
+    <h2 id="essay"><span>小論文</span></h2>
+    <p class="sub">序論・本論・結論の形で書く、軽めの読みものです。</p>
+    <article class="essay">
+      <p class="meta"><time datetime="2026-10-01">2026.10.01</time>（サンプル記事）</p>
+      <h3>なぜ私たちは小さなキャラクター雑貨に惹かれるのか</h3>
+
+      <h4>序論</h4>
+      <p>文房具、マグカップ、ポーチなど、身近な雑貨にはキャラクターがついていることが多い。機能だけなら不要なはずの絵柄に、私たちはなぜ惹かれるのだろうか。</p>
+
+      <h4>本論</h4>
+      <p>第一に、丸くて小さい形は親しみやすさを生む。第二に、毎日使うものにお気に入りがあると、ささやかな楽しみになる。第三に、同じキャラクターを持つ人同士で話題が生まれ、雑貨が会話のきっかけにもなる。</p>
+
+      <h4>結論</h4>
+      <p>キャラクター雑貨は、見た目のかわいさだけでなく、気持ちを和らげ、人とつながる役割も持っていると考えられる。今後は具体的な商品を例に、さらに調べていきたい。</p>
+    </article>
+  </section>
+
+  <section aria-labelledby="report">
+    <h2 id="report"><span>特集ページ</span></h2>
+    <p class="sub">じっくり読みたい記事は、別ページにまとめています。</p>
+    <a class="feature" href="report1.html">
+      <span class="no" aria-hidden="true">特集1</span>
+      <span>
+        <b>企画展の感想</b>
+        <small>見てきた雑貨の企画展の感想をまとめています。</small>
+      </span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <small>&copy; 2026 雑貨のおべんきょう</small>
+</footer>
+
+</body>
+</html>
