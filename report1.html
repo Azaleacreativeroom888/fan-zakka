@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企画展の感想 | 雑貨のおべんきょう</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#da70b6;
+  --pink-deep:#a8458a;
+  --pink-pale:#f6d3e8;
+  --paper:#fffafd;
+  --ink:#4a2340;
+  --butter:#fff1a8;
+  --font-body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  --font-head:"Yusei Magic","Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.85;font-size:16px}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--pink-deep);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+header{background:var(--pink);color:#fff}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:12px;padding-bottom:12px}
+.logo{font-family:var(--font-head);font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{display:block;padding:4px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.25)}
+nav a[aria-current="page"]{background:#fff;color:var(--pink-deep)}
+
+.title{background:var(--pink-pale);border-bottom:6px dotted var(--pink)}
+.title .wrap{padding-top:36px;padding-bottom:30px}
+.title h1{margin:0;font-family:var(--font-head);font-weight:400;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.3}
+.title p{margin:6px 0 0}
+
+.list{max-width:720px;margin:40px auto 0;padding:0 20px;display:grid;gap:28px}
+
+/* 1件ぶん */
+.exhibit{background:#fff;border:3px solid var(--pink);border-radius:10px 40px 40px 10px;box-shadow:3px 4px 0 var(--pink);padding:22px 28px 20px}
+.exhibit:nth-child(even){border-radius:40px 10px 10px 40px;box-shadow:-3px 4px 0 var(--pink)}
+.exhibit dl{margin:0}
+.row{display:grid;grid-template-columns:7.5em 1fr;gap:4px 16px;padding:10px 0;border-bottom:2px dashed var(--pink-pale)}
+.row:last-child{border-bottom:0}
+.row dt{font-weight:700;color:var(--pink-deep)}
+.row dt span{display:inline-grid;place-items:center;width:1.6em;height:1.6em;margin-right:.4em;border-radius:50%;background:var(--butter);color:var(--ink);font-size:.85rem}
+.row dd{margin:0}
+.row.name dd{font-family:var(--font-head);font-size:1.35rem;line-height:1.5}
+
+.back{display:inline-block;margin:32px 0 0 20px;font-weight:700;color:var(--pink-deep)}
+
+footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;padding:20px;font-size:.9rem}
+@media (max-width:720px){
+  .row{grid-template-columns:1fr}
+  .exhibit{padding:18px 20px 14px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">雑貨のおべんきょう</a>
+    <nav aria-label="メインメニュー">
+      <ul>
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="blog.html">ブログ</a></li>
+        <li><a href="column.html" aria-current="page">コラム</a></li>
+        <li><a href="about.html">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="title">
+  <div class="wrap">
+    <h1>企画展の感想</h1>
+    <p>見てきた企画展を、①企画展 ②開催日数 ③開催場所 ④解説 の順にまとめています。</p>
+  </div>
+</div>
+
+<main>
+  <div class="list">
+    <!-- 新しい企画展は、ここにコピーして追加してください
+    <article class="exhibit">
+      <dl>
+        <div class="row name"><dt><span>①</span>企画展</dt><dd>企画展の名前</dd></div>
+        <div class="row"><dt><span>②</span>開催日数</dt><dd>00日間（0000.00.00〜00.00）</dd></div>
+        <div class="row"><dt><span>③</span>開催場所</dt><dd>会場の名前・場所</dd></div>
+        <div class="row"><dt><span>④</span>解説</dt><dd>展示の内容や感想を書く。</dd></div>
+      </dl>
+    </article>
+    -->
+
+    <article class="exhibit">
+      <dl>
+        <div class="row name"><dt><span>①</span>企画展</dt><dd>〇〇雑貨展（サンプル）</dd></div>
+        <div class="row"><dt><span>②</span>開催日数</dt><dd>〇〇日間（0000.00.00〜00.00）</dd></div>
+        <div class="row"><dt><span>③</span>開催場所</dt><dd>〇〇美術館（サンプル）</dd></div>
+        <div class="row"><dt><span>④</span>解説</dt><dd>ここに展示の内容や、見て感じたことを書きます。サンプルなので、実際に行った企画展の内容に書き換えてください。</dd></div>
+      </dl>
+    </article>
+
+    <article class="exhibit">
+      <dl>
+        <div class="row name"><dt><span>①</span>企画展</dt><dd>△△キャラクター展（サンプル）</dd></div>
+        <div class="row"><dt><span>②</span>開催日数</dt><dd>〇〇日間（0000.00.00〜00.00）</dd></div>
+        <div class="row"><dt><span>③</span>開催場所</dt><dd>△△会場（サンプル）</dd></div>
+        <div class="row"><dt><span>④</span>解説</dt><dd>2件目のサンプルです。企画展が増えたら、上のコメントのひな形をコピーして、一番上に足してください。</dd></div>
+      </dl>
+    </article>
+  </div>
+
+  <a class="back" href="column.html">← コラムに戻る</a>
+</main>
+
+<footer>
+  <small>&copy; 2026 雑貨のおべんきょう</small>
+</footer>
+
+</body>
+</html>
