@@ -69,6 +69,7 @@ h2 span{background:linear-gradient(transparent 62%,var(--pink-pale) 62%)}
 /* 特集リンク */
 .feature{display:flex;align-items:center;gap:18px;max-width:680px;padding:18px 24px;background:var(--butter);border:3px solid var(--pink);border-radius:10px 40px 40px 10px;box-shadow:3px 4px 0 var(--pink);text-decoration:none}
 .feature:hover{background:var(--pink-pale)}
+.feature + .feature{margin-top:18px}
 .feature .no{flex:none;width:52px;height:52px;border-radius:50%;background:var(--pink);color:#fff;font-family:var(--font-head);display:grid;place-items:center;font-size:.95rem}
 .feature b{display:block;font-family:var(--font-head);font-weight:400;font-size:1.3rem;line-height:1.4}
 .feature small{display:block;font-size:.9rem;line-height:1.6}
@@ -161,6 +162,14 @@ footer{margin-top:56px;background:var(--pink);color:#fff;text-align:center;paddi
       <span>
         <b>企画展の感想</b>
         <small>見てきた雑貨の企画展の感想をまとめています。</small>
+      </span>
+      <span class="arrow" aria-hidden="true">›</span>
+    </a>
+    <a class="feature" href="report2.html">
+      <span class="no" aria-hidden="true">特集2</span>
+      <span>
+        <b>キャラクター一覧メモ</b>
+        <small>気になるキャラクターを一覧にして、メモしています。</small>
       </span>
       <span class="arrow" aria-hidden="true">›</span>
     </a>
